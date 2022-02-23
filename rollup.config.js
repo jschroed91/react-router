@@ -32,7 +32,7 @@ function reactRouter() {
   // JS modules for bundlers
   const modules = [
     {
-      input: `${SOURCE_DIR}/index.tsx`,
+      input: `${SOURCE_DIR}/index.ts`,
       output: {
         file: `${OUTPUT_DIR}/index.js`,
         format: "esm",
@@ -66,7 +66,7 @@ function reactRouter() {
   // JS modules for <script type=module>
   const webModules = [
     {
-      input: `${SOURCE_DIR}/index.tsx`,
+      input: `${SOURCE_DIR}/index.ts`,
       output: {
         file: `${OUTPUT_DIR}/react-router.development.js`,
         format: "esm",
@@ -92,7 +92,7 @@ function reactRouter() {
       ].concat(PRETTY ? prettier({ parser: "babel" }) : []),
     },
     {
-      input: `${SOURCE_DIR}/index.tsx`,
+      input: `${SOURCE_DIR}/index.ts`,
       output: {
         file: `${OUTPUT_DIR}/react-router.production.min.js`,
         format: "esm",
@@ -136,7 +136,7 @@ function reactRouter() {
   // UMD modules for <script> tags and CommonJS (node)
   const globals = [
     {
-      input: `${SOURCE_DIR}/index.tsx`,
+      input: `${SOURCE_DIR}/index.ts`,
       output: {
         file: `${OUTPUT_DIR}/umd/react-router.development.js`,
         format: "umd",
@@ -164,7 +164,7 @@ function reactRouter() {
       ].concat(PRETTY ? prettier({ parser: "babel" }) : []),
     },
     {
-      input: `${SOURCE_DIR}/index.tsx`,
+      input: `${SOURCE_DIR}/index.ts`,
       output: {
         file: `${OUTPUT_DIR}/umd/react-router.production.min.js`,
         format: "umd",
