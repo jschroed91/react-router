@@ -15,15 +15,23 @@ import type {
   // @ts-ignore
 } from "./lib/components.tsx";
 import {
-  NavigationContext,
-  LocationContext,
-  RouteContext,
   MemoryRouter,
   Navigate,
   Outlet,
   Route,
   Router,
   Routes,
+  createRoutesFromChildren,
+  renderMatches,
+  // @ts-ignore
+} from "./lib/components.tsx";
+import {
+  NavigationContext,
+  LocationContext,
+  RouteContext,
+  // @ts-ignore
+} from "./lib/context.ts";
+import {
   useHref,
   useInRouterContext,
   useLocation,
@@ -35,10 +43,8 @@ import {
   useParams,
   useResolvedPath,
   useRoutes,
-  createRoutesFromChildren,
-  renderMatches,
   // @ts-ignore
-} from "./lib/components.tsx";
+} from "./lib/hooks.tsx";
 import type {
   Params,
   PathMatch,
