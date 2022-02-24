@@ -110,19 +110,6 @@ export function Navigate({ to, replace, state }: NavigateProps): null {
   return null;
 }
 
-export interface OutletProps {
-  context?: unknown;
-}
-
-/**
- * Renders the child route's element, if there is one.
- *
- * @see https://reactrouter.com/docs/en/v6/api#outlet
- */
-export function Outlet(props: OutletProps): React.ReactElement | null {
-  return useOutlet(props.context);
-}
-
 export interface RouteProps {
   caseSensitive?: boolean;
   children?: React.ReactNode;

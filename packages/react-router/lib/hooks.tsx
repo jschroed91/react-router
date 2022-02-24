@@ -24,8 +24,6 @@ import {
 } from "./router.ts";
 // @ts-ignore
 import { LocationContext, NavigationContext, RouteContext } from "./context.ts";
-// @ts-ignore
-import { Outlet } from "./components.tsx";
 
 /**
  * Returns the full href for the given "to" value. This is useful for building
@@ -398,4 +396,19 @@ export function _renderMatches(
       />
     );
   }, null as React.ReactElement | null);
+}
+
+// Note: OutletProps/Outlet are included in thr hooks file so they can be leveraged
+// by renderMatches without creating a circular dependency
+export interface OutletProps {
+  context?: unknown;
+}
+
+/**
+ * Renders the child route's element, if there is one.
+ *
+ * @see https://reactrouter.com/docs/en/v6/api#outlet
+ */
+export function Outlet(props: OutletProps): React.ReactElement | null {
+  return useOutlet(props.context);
 }
