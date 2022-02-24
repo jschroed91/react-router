@@ -1,4 +1,4 @@
-import type { Path, To } from "history";
+import type { Location, Path, To } from "history";
 import { parsePath } from "history";
 import type { ReactNode } from "react";
 

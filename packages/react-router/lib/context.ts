@@ -1,5 +1,6 @@
 import * as React from "react";
-import type { Action as NavigationType, History } from "history";
+import type { Action as NavigationType, History, Location } from "history";
+
 import { RouteMatch } from "./router";
 
 /**

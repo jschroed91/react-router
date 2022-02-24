@@ -1,37 +1,36 @@
 import type { Action as NavigationType, Location, Path, To } from "history";
 import type {
-  Navigator,
   MemoryRouterProps,
   NavigateProps,
-  OutletProps,
   RouteProps,
   PathRouteProps,
   LayoutRouteProps,
   IndexRouteProps,
   RouterProps,
   RoutesProps,
-  NavigateFunction,
-  NavigateOptions,
-  // @ts-ignore
-} from "./lib/components.tsx";
+} from "./lib/components";
 import {
   MemoryRouter,
   Navigate,
-  Outlet,
   Route,
   Router,
   Routes,
   createRoutesFromChildren,
   renderMatches,
-  // @ts-ignore
-} from "./lib/components.tsx";
+} from "./lib/components";
+import type { Navigator } from "./lib/context";
 import {
   NavigationContext,
   LocationContext,
   RouteContext,
-  // @ts-ignore
-} from "./lib/context.ts";
+} from "./lib/context";
+import type {
+  NavigateFunction,
+  NavigateOptions,
+  OutletProps,
+} from "./lib/hooks";
 import {
+  Outlet,
   useHref,
   useInRouterContext,
   useLocation,
@@ -43,23 +42,20 @@ import {
   useParams,
   useResolvedPath,
   useRoutes,
-  // @ts-ignore
-} from "./lib/hooks.tsx";
+} from "./lib/hooks";
 import type {
   Params,
   PathMatch,
   PathPattern,
   RouteMatch,
   RouteObject,
-  // @ts-ignore
-} from "./lib/router.ts";
+} from "./lib/router";
 import {
   generatePath,
   matchPath,
   matchRoutes,
   resolvePath,
-  // @ts-ignore
-} from "./lib/router.ts";
+} from "./lib/router";
 
 // Export the react-router public API
 export type {

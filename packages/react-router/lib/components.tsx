@@ -1,34 +1,20 @@
 import * as React from "react";
-import type { InitialEntry, MemoryHistory, To } from "history";
+import type { InitialEntry, Location, MemoryHistory, To } from "history";
 import {
   Action as NavigationType,
   createMemoryHistory,
   parsePath,
 } from "history";
 
-import type {
-  RouteMatch,
-  RouteObject,
-  // @ts-ignore
-} from "./router.ts";
-import {
-  invariant,
-  normalizePathname,
-  stripBasename,
-  warning,
-  // @ts-ignore
-} from "./router.ts";
+import type { RouteMatch, RouteObject } from "./router";
+import { invariant, normalizePathname, stripBasename, warning } from "./router";
 import {
   useInRouterContext,
   useNavigate,
-  useOutlet,
   useRoutes,
   _renderMatches,
-  // @ts-ignore
-} from "./hooks.tsx";
-// @ts-ignore
-
-import { LocationContext, NavigationContext } from "./context.ts";
+} from "./hooks";
+import { LocationContext, NavigationContext, Navigator } from "./context";
 
 export interface MemoryRouterProps {
   basename?: string;

@@ -1,5 +1,5 @@
 import * as React from "react";
-import type { Action as NavigationType, Path, To } from "history";
+import type { Action as NavigationType, Location, Path, To } from "history";
 import { parsePath } from "history";
 
 import type {
@@ -9,8 +9,7 @@ import type {
   PathPattern,
   RouteMatch,
   RouteObject,
-  // @ts-ignore
-} from "./router.ts";
+} from "./router";
 import {
   getToPathname,
   invariant,
@@ -20,10 +19,8 @@ import {
   resolveTo,
   warning,
   warningOnce,
-  // @ts-ignore
-} from "./router.ts";
-// @ts-ignore
-import { LocationContext, NavigationContext, RouteContext } from "./context.ts";
+} from "./router";
+import { LocationContext, NavigationContext, RouteContext } from "./context";
 
 /**
  * Returns the full href for the given "to" value. This is useful for building
